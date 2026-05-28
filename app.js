@@ -32,7 +32,12 @@ const success = document.querySelector('.form-success');
 const echoEmail = document.querySelector('.echo-email');
 
 function validURL(v) {
-  return /(maps\.google\.com|goo\.gl\/maps|maps\.app\.goo\.gl)/i.test(v);
+  try {
+    const u = new URL(String(v).trim());
+    return u.protocol === 'http:' || u.protocol === 'https:';
+  } catch {
+    return false;
+  }
 }
 
 form.addEventListener('submit', async (ev) => {
