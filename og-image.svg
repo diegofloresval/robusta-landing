@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .title { font-family: "Sora", system-ui, sans-serif; font-weight: 700; fill: #1A1A1A; }
+      .em { font-style: italic; fill: #1F2D5C; }
+      .sub { font-family: "DM Sans", system-ui, sans-serif; font-weight: 400; fill: #4A4A4A; }
+      .brand { font-family: "Sora", system-ui, sans-serif; font-weight: 700; fill: #1A1A1A; letter-spacing: 0.08em; }
+      .brand-sub { font-family: "DM Sans", system-ui, sans-serif; font-weight: 500; fill: #6B6B6B; letter-spacing: 0.18em; }
+      .tag { font-family: "DM Sans", system-ui, sans-serif; font-weight: 500; fill: #6B6B6B; letter-spacing: 0.14em; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F9F6F0"/>
+
+  <!-- Decorative graph nodes (top-right) -->
+  <g opacity="0.85">
+    <line x1="1020" y1="120" x2="1110" y2="80"  stroke="#1A1A1A" stroke-width="1" opacity="0.25"/>
+    <line x1="1020" y1="120" x2="1080" y2="200" stroke="#1A1A1A" stroke-width="1" opacity="0.25"/>
+    <line x1="1080" y1="200" x2="1140" y2="260" stroke="#1A1A1A" stroke-width="1" opacity="0.25"/>
+    <line x1="1110" y1="80"  x2="1140" y2="260" stroke="#1A1A1A" stroke-width="1" opacity="0.18"/>
+    <circle cx="1020" cy="120" r="14" fill="#E84A8E"/>
+    <circle cx="1110" cy="80"  r="10" fill="#00B5C7"/>
+    <circle cx="1080" cy="200" r="18" fill="#1F2D5C"/>
+    <circle cx="1140" cy="260" r="8"  fill="#F5C518"/>
+  </g>
+
+  <!-- Decorative graph nodes (bottom-left) -->
+  <g opacity="0.85">
+    <line x1="80"  y1="540" x2="160" y2="500" stroke="#1A1A1A" stroke-width="1" opacity="0.25"/>
+    <line x1="80"  y1="540" x2="130" y2="580" stroke="#1A1A1A" stroke-width="1" opacity="0.25"/>
+    <line x1="160" y1="500" x2="220" y2="540" stroke="#1A1A1A" stroke-width="1" opacity="0.18"/>
+    <circle cx="80"  cy="540" r="12" fill="#F5C518"/>
+    <circle cx="160" cy="500" r="9"  fill="#00B5C7"/>
+    <circle cx="130" cy="580" r="7"  fill="#E84A8E"/>
+    <circle cx="220" cy="540" r="14" fill="#1F2D5C"/>
+  </g>
+
+  <!-- Brand mark (top-left) -->
+  <g transform="translate(80, 80)">
+    <g transform="scale(1.4)">
+      <circle cx="8"  cy="8"  r="3.2" fill="#E84A8E"/>
+      <circle cx="24" cy="10" r="2.4" fill="#00B5C7"/>
+      <circle cx="20" cy="24" r="3.6" fill="#1F2D5C"/>
+      <circle cx="6"  cy="22" r="2"   fill="#F5C518"/>
+      <path d="M8 8 L24 10 L20 24 L6 22 Z" stroke="#1A1A1A" stroke-width=".6" fill="none" opacity=".4"/>
+    </g>
+    <text x="60" y="28" class="brand" font-size="28">ROBUSTA</text>
+    <text x="60" y="52" class="brand-sub" font-size="13">INSIGHTS</text>
+  </g>
+
+  <!-- Main headline -->
+  <text x="80" y="320" class="title" font-size="84">Transformamos datos</text>
+  <text x="80" y="420" class="title" font-size="84">en <tspan class="em">decisiones</tspan>.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="490" class="sub" font-size="26">Diagnóstico de reputación digital basado en tus reseñas de Google Maps.</text>
+
+  <!-- Footer tag -->
+  <text x="80" y="582" class="tag" font-size="14">ROBUSTA.QZZ.IO</text>
+</svg>
