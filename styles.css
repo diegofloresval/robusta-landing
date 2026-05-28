@@ -182,8 +182,8 @@ main { position: relative; z-index: 2; }
 .display {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(48px, 9vw, 132px);
-  line-height: .96;
+  font-size: clamp(42px, 6.2vw, 88px);
+  line-height: 1;
   letter-spacing: -.03em;
   margin: 0 0 28px;
 }
