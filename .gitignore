@@ -3,3 +3,9 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+node_modules/
+package.json
+package-lock.json
+_og-template.html
+_render-og.js
+og-image.svg
