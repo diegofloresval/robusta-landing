@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Diagnóstico de Reputación Digital — ROBUSTA</title>
+<meta name="description" content="Analizamos las reseñas de Google Maps de tu negocio y te entregamos un diagnóstico con insights accionables en 24–48 horas." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="graph" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="ROBUSTA">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+      <circle cx="8" cy="8" r="3.2" fill="#E84A8E"/>
+      <circle cx="24" cy="10" r="2.4" fill="#00B5C7"/>
+      <circle cx="20" cy="24" r="3.6" fill="#1F2D5C"/>
+      <circle cx="6" cy="22" r="2" fill="#F5C518"/>
+      <path d="M8 8 L24 10 L20 24 L6 22 Z" stroke="#1A1A1A" stroke-width=".6" fill="none" opacity=".4"/>
+    </svg>
+    <span class="brand-name">
+      ROBUSTA
+      <small class="brand-sub">Insights</small>
+    </span>
+    <em>— estudio de datos</em>
+  </a>
+  <nav class="nav-meta">
+    <span class="muted">Tomando casos · mayo 2026</span>
+    <a href="#solicitar" class="cta-pill">
+      Solicitar diagnóstico
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="display">
+      Transformamos datos<br/>en <em>decisiones</em>.
+    </h1>
+
+    <p class="lede">
+      Analizamos las reseñas de Google Maps de tu negocio y te entregamos
+      hallazgos que <u>podés usar</u>.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#solicitar" class="btn-primary">
+        Pedir mi diagnóstico
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- PROCESS LINE (moved up: explain simplicity first) -->
+  <section class="process" id="como">
+    <ol>
+      <li>
+        <span class="step-num">01</span>
+        <h4>Pegás el link</h4>
+        <p>Solo necesitamos la URL pública de tu ficha de Google Maps.</p>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <h4>Procesamos</h4>
+        <p>Extraemos todas las reseñas y las cruzamos contra nuestros modelos.</p>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <h4>Recibís el reporte</h4>
+        <p>Un PDF curado + sesión opcional de 30 min para discutir hallazgos.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Stage section (animation, now standalone) -->
+  <section class="stage-section">
+    <!-- Stage: reviews morphing into charts -->
+    <div class="stage" aria-hidden="true">
+      <div class="stage-rail">
+        <span class="rail-tick">INPUT</span>
+        <span class="rail-line"></span>
+        <span class="rail-tick">→ PROCESS</span>
+        <span class="rail-line"></span>
+        <span class="rail-tick">OUTPUT</span>
+      </div>
+
+      <div class="stage-inner">
+        <!-- Review cards -->
+        <article class="review r1">
+          <header>
+            <span class="avatar" style="background:#E84A8E">M</span>
+            <div>
+              <strong>Mariana G.</strong>
+              <div class="stars" data-rating="2">★★<span>★★★</span></div>
+            </div>
+            <span class="when">hace 3 días</span>
+          </header>
+          <p>“La comida buenísima pero esperamos <mark>40 minutos</mark> para que nos atiendan. El mozo parecía solo.”</p>
+        </article>
+
+        <article class="review r2">
+          <header>
+            <span class="avatar" style="background:#00B5C7">J</span>
+            <div>
+              <strong>Joaquín R.</strong>
+              <div class="stars" data-rating="5">★★★★★</div>
+            </div>
+            <span class="when">hace 1 sem.</span>
+          </header>
+          <p>“Volvería mil veces. <mark>El ambiente</mark> es lo mejor de Palermo, y el café de especialidad — top.”</p>
+        </article>
+
+        <article class="review r3">
+          <header>
+            <span class="avatar" style="background:#F5C518;color:#1A1A1A">S</span>
+            <div>
+              <strong>Sofía L.</strong>
+              <div class="stars" data-rating="3">★★★<span>★★</span></div>
+            </div>
+            <span class="when">hace 2 sem.</span>
+          </header>
+          <p>“Rico pero <mark>caro para la porción</mark>. Atención muy correcta, vinieron rápido al pedido.”</p>
+        </article>
+
+        <!-- Insight cards -->
+        <article class="insight i1">
+          <span class="kicker">tiempo de espera</span>
+          <div class="bar-row"><span class="bar-lbl">menciones neg.</span><span class="bar"><i style="--w:78%"></i></span><span class="bar-val">78%</span></div>
+          <div class="bar-row"><span class="bar-lbl">picos viernes</span><span class="bar"><i style="--w:62%;background:#E84A8E"></i></span><span class="bar-val">62%</span></div>
+          <footer>↳ contratar refuerzo viernes 20–22 h</footer>
+        </article>
+
+        <article class="insight i2">
+          <span class="kicker">sentimiento</span>
+          <svg viewBox="0 0 120 120" class="donut">
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#EDE6D6" stroke-width="14"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#4FAE52" stroke-width="14" stroke-dasharray="226 301" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#F5C518" stroke-width="14" stroke-dasharray="45 301" stroke-dashoffset="-226" transform="rotate(-90 60 60)"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#E84A8E" stroke-width="14" stroke-dasharray="30 301" stroke-dashoffset="-271" transform="rotate(-90 60 60)"/>
+            <text x="60" y="58" text-anchor="middle" class="donut-num">75</text>
+            <text x="60" y="74" text-anchor="middle" class="donut-lbl">/ 100 NPS</text>
+          </svg>
+        </article>
+
+        <article class="insight i3">
+          <span class="kicker">tópicos</span>
+          <ul class="topics">
+            <li><span class="dot" style="background:#00B5C7"></span>ambiente <b>+42</b></li>
+            <li><span class="dot" style="background:#E84A8E"></span>espera <b>−28</b></li>
+            <li><span class="dot" style="background:#F5C518"></span>precio <b>−11</b></li>
+            <li><span class="dot" style="background:#4FAE52"></span>café <b>+19</b></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="value">
+    <div class="section-head">
+      <h2 class="display sm geo">El feedback ya lo tenés.<br/>Lo que falta es <em>leerlo bien</em>.</h2>
+      <p>
+        Cada reseña es una señal. Cien reseñas son un mapa. Convertimos texto
+        desestructurado en patrones que el ojo humano no detecta.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card" style="--accent:#E84A8E">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="22" width="5" height="12" fill="currentColor"/><rect x="14" y="14" width="5" height="20" fill="currentColor" opacity=".7"/><rect x="22" y="8" width="5" height="26" fill="currentColor" opacity=".5"/><rect x="30" y="18" width="5" height="16" fill="currentColor" opacity=".35"/></svg>
+        </div>
+        <span class="card-num">01</span>
+        <h3>Análisis de sentimiento</h3>
+        <p>Clasificamos reseñas (positivas, neutras, negativas) con modelos calibrados.</p>
+      </article>
+
+      <article class="card" style="--accent:#00B5C7">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="17" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 24 L34 34" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="17" r="3" fill="currentColor"/></svg>
+        </div>
+        <span class="card-num">02</span>
+        <h3>Tópicos recurrentes</h3>
+        <p>Detectamos automáticamente qué temas se repiten más.</p>
+      </article>
+
+      <article class="card" style="--accent:#F5C518">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><path d="M4 30 L12 22 L20 26 L28 14 L36 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="22" r="2.4" fill="currentColor"/><circle cx="28" cy="14" r="2.4" fill="currentColor"/></svg>
+        </div>
+        <span class="card-num">03</span>
+        <h3>Patrones temporales</h3>
+        <p>Visualizamos picos y caídas de satisfacción en el tiempo.</p>
+      </article>
+
+      <article class="card" style="--accent:#4FAE52">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><path d="M14 6 C8 6 8 14 14 14 L20 14 L20 6 Z" fill="currentColor" opacity=".8"/><path d="M14 16 L20 20 L20 32 L14 32 Z" fill="currentColor" opacity=".5"/><path d="M22 8 L34 8 M22 14 L32 14 M22 20 L34 20 M22 26 L30 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <span class="card-num">04</span>
+        <h3>Recomendaciones</h3>
+        <p>Acciones concretas priorizadas por impacto.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="solicitar">
+    <div class="form-wrap">
+      <header class="form-header">
+        <h2 class="display sm geo">Pedí tu diagnóstico.<br/><em>Gratis</em>, en 24–48 h.</h2>
+      </header>
+
+      <form id="lead-form" class="form" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre completo <span>*</span></label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="name" placeholder="Daniela Flores" />
+        </div>
+
+        <div class="field">
+          <label for="negocio">Nombre del negocio <span>*</span></label>
+          <input id="negocio" name="negocio" type="text" required placeholder="Café del Centro" />
+        </div>
+
+        <div class="field">
+          <label for="link">Link de Google Maps <span>*</span></label>
+          <input id="link" name="link" type="url" required placeholder="https://maps.google.com/..." pattern=".*(maps\.google\.com|goo\.gl/maps|maps\.app\.goo\.gl).*" />
+          <small class="hint">Pegá el link público de tu ficha en Google Maps.</small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email de contacto <span>*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="vos@tunegocio.com" />
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span class="btn-label">Solicitar diagnóstico</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p class="form-foot">Procesamos cada solicitud manualmente. Te respondemos siempre, incluso si no podemos tomar el caso.</p>
+      </form>
+
+      <div class="form-success" hidden>
+        <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="28" fill="none" stroke="#4FAE52" stroke-width="2.5"/><path d="M20 33 L29 42 L46 23" fill="none" stroke="#4FAE52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>¡Listo! Recibimos tu solicitud.</h3>
+        <p>Te enviaremos el reporte a <strong class="echo-email">—</strong> en 24–48 horas hábiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-row">
+      <span class="brand-foot">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <circle cx="8" cy="8" r="3.2" fill="#E84A8E"/>
+          <circle cx="24" cy="10" r="2.4" fill="#00B5C7"/>
+          <circle cx="20" cy="24" r="3.6" fill="#1F2D5C"/>
+          <circle cx="6" cy="22" r="2" fill="#F5C518"/>
+          <path d="M8 8 L24 10 L20 24 L6 22 Z" stroke="#1A1A1A" stroke-width=".6" fill="none" opacity=".4"/>
+        </svg>
+        <span class="brand-foot-name">ROBUSTA</span>
+      </span>
+      <span class="muted">Inteligencia de datos</span>
+    </div>
+    <div class="foot-row sub">
+      <span class="muted small">© 2026 ROBUSTA</span>
+    </div>
+  </footer>
+</main>
+
+<script src="graph.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
