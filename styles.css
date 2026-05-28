@@ -361,6 +361,7 @@ main { position: relative; z-index: 2; }
   color: #fff;
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 600; font-size: 13px;
+  flex-shrink: 0;
 }
 .review strong { font-size: 13px; }
 .review .stars { color: var(--c-yellow); font-size: 13px; letter-spacing: 1px; line-height: 1; }
