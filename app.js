@@ -56,10 +56,12 @@ form.addEventListener('submit', async (ev) => {
   btn.classList.add('loading');
 
   try {
-    // POST to /api/submit — mocked when running locally
-    await new Promise(r => setTimeout(r, 900));
-    // const res = await fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-    // if (!res.ok) throw new Error('bad');
+    const res = await fetch('https://formspree.io/f/xeednqra', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error('bad');
 
     echoEmail.textContent = data.email;
     form.style.transition = 'opacity .5s ease, transform .5s ease';
