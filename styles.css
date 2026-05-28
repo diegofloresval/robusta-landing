@@ -455,9 +455,13 @@ main { position: relative; z-index: 2; }
 }
 
 @media (max-width: 820px) {
-  .stage-inner { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stage-inner { height: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .review, .insight { position: relative; top: auto; left: auto; right: auto; --rot: 0deg; width: 100%; animation: none; }
   .stage-inner::before, .stage-inner::after { display: none; }
+}
+@media (max-width: 560px) {
+  .stage-inner { grid-template-columns: 1fr; gap: 16px; }
+  .review p, .insight { font-size: 15px; }
 }
 
 /* ── VALUE SECTION ───────────────────────────────────── */
