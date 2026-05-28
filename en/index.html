@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Digital Reputation Diagnosis — ROBUSTA</title>
+<meta name="description" content="We analyze your business's Google Maps reviews and deliver a diagnosis with actionable insights in 24–48 hours." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ROBUSTA Insights" />
+<meta property="og:title" content="Digital Reputation Diagnosis — ROBUSTA" />
+<meta property="og:description" content="We analyze your business's Google Maps reviews and deliver a diagnosis with actionable insights in 24–48 hours." />
+<meta property="og:url" content="https://robusta.qzz.io/en/" />
+<meta property="og:image" content="https://robusta.qzz.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="ROBUSTA Insights — We turn data into decisions" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="es_AR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Digital Reputation Diagnosis — ROBUSTA" />
+<meta name="twitter:description" content="We analyze your business's Google Maps reviews and deliver a diagnosis with actionable insights in 24–48 hours." />
+<meta name="twitter:image" content="https://robusta.qzz.io/og-image.png" />
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="es" href="https://robusta.qzz.io/" />
+<link rel="alternate" hreflang="en" href="https://robusta.qzz.io/en/" />
+<link rel="alternate" hreflang="x-default" href="https://robusta.qzz.io/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=2" />
+</head>
+<body>
+
+<canvas id="graph" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="ROBUSTA">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+      <circle cx="8" cy="8" r="3.2" fill="#E84A8E"/>
+      <circle cx="24" cy="10" r="2.4" fill="#00B5C7"/>
+      <circle cx="20" cy="24" r="3.6" fill="#1F2D5C"/>
+      <circle cx="6" cy="22" r="2" fill="#F5C518"/>
+      <path d="M8 8 L24 10 L20 24 L6 22 Z" stroke="#1A1A1A" stroke-width=".6" fill="none" opacity=".4"/>
+    </svg>
+    <span class="brand-name">
+      ROBUSTA
+      <small class="brand-sub">Insights</small>
+    </span>
+  </a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="display">
+      We turn data<br/>into <em>decisions</em>.
+    </h1>
+
+    <p class="lede">
+      We analyze your business's Google Maps reviews and deliver
+      findings <u>you can actually use</u>.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#solicitar" class="btn-primary">
+        Get my diagnosis
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- PROCESS LINE -->
+  <section class="process" id="como">
+    <ol>
+      <li>
+        <span class="step-num">01</span>
+        <h4>Paste the link</h4>
+        <p>All we need is the public URL of your Google Maps listing.</p>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <h4>We process it</h4>
+        <p>We extract every review and run them through our models.</p>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <h4>You get the report</h4>
+        <p>A curated PDF + optional 30-min session to walk through the findings.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Stage section -->
+  <section class="stage-section">
+    <div class="stage" aria-hidden="true">
+      <div class="stage-rail">
+        <span class="rail-tick">INPUT</span>
+        <span class="rail-line"></span>
+        <span class="rail-tick">→ PROCESS</span>
+        <span class="rail-line"></span>
+        <span class="rail-tick">OUTPUT</span>
+      </div>
+
+      <div class="stage-inner">
+        <!-- Review cards -->
+        <article class="review r1">
+          <header>
+            <span class="avatar" style="background:#E84A8E">M</span>
+            <div>
+              <strong>Megan G.</strong>
+              <div class="stars" data-rating="2">★★<span>★★★</span></div>
+            </div>
+            <span class="when">3 days ago</span>
+          </header>
+          <p>“Food was amazing but we waited <mark>40 minutes</mark> to be served. The waiter seemed to be alone.”</p>
+        </article>
+
+        <article class="review r2">
+          <header>
+            <span class="avatar" style="background:#00B5C7">J</span>
+            <div>
+              <strong>Jack R.</strong>
+              <div class="stars" data-rating="5">★★★★★</div>
+            </div>
+            <span class="when">1 week ago</span>
+          </header>
+          <p>“Would come back a thousand times. <mark>The vibe</mark> is the best in the neighborhood, and the specialty coffee — top tier.”</p>
+        </article>
+
+        <article class="review r3">
+          <header>
+            <span class="avatar" style="background:#F5C518;color:#1A1A1A">S</span>
+            <div>
+              <strong>Sophie L.</strong>
+              <div class="stars" data-rating="3">★★★<span>★★</span></div>
+            </div>
+            <span class="when">2 weeks ago</span>
+          </header>
+          <p>“Tasty but <mark>pricey for the portion</mark>. Service was correct, order came fast.”</p>
+        </article>
+
+        <!-- Insight cards -->
+        <article class="insight i1">
+          <span class="kicker">wait time</span>
+          <div class="bar-row"><span class="bar-lbl">neg. mentions</span><span class="bar"><i style="--w:78%"></i></span><span class="bar-val">78%</span></div>
+          <div class="bar-row"><span class="bar-lbl">friday peaks</span><span class="bar"><i style="--w:62%;background:#E84A8E"></i></span><span class="bar-val">62%</span></div>
+          <footer>↳ add staff Fridays 8–10 PM</footer>
+        </article>
+
+        <article class="insight i2">
+          <span class="kicker">sentiment</span>
+          <svg viewBox="0 0 120 120" class="donut">
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#EDE6D6" stroke-width="14"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#4FAE52" stroke-width="14" stroke-dasharray="226 301" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#F5C518" stroke-width="14" stroke-dasharray="45 301" stroke-dashoffset="-226" transform="rotate(-90 60 60)"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#E84A8E" stroke-width="14" stroke-dasharray="30 301" stroke-dashoffset="-271" transform="rotate(-90 60 60)"/>
+            <text x="60" y="58" text-anchor="middle" class="donut-num">75</text>
+            <text x="60" y="74" text-anchor="middle" class="donut-lbl">/ 100 NPS</text>
+          </svg>
+        </article>
+
+        <article class="insight i3">
+          <span class="kicker">topics</span>
+          <ul class="topics">
+            <li><span class="dot" style="background:#00B5C7"></span>ambiance <b>+42</b></li>
+            <li><span class="dot" style="background:#E84A8E"></span>wait <b>−28</b></li>
+            <li><span class="dot" style="background:#F5C518"></span>price <b>−11</b></li>
+            <li><span class="dot" style="background:#4FAE52"></span>coffee <b>+19</b></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="value">
+    <div class="section-head">
+      <h2 class="display sm geo">You already have the feedback.<br/>What's missing is <em>reading it right</em>.</h2>
+      <p>
+        Every review is a signal. A hundred reviews are a map. We turn
+        unstructured text into patterns the human eye can't catch.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card" style="--accent:#E84A8E">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="22" width="5" height="12" fill="currentColor"/><rect x="14" y="14" width="5" height="20" fill="currentColor" opacity=".7"/><rect x="22" y="8" width="5" height="26" fill="currentColor" opacity=".5"/><rect x="30" y="18" width="5" height="16" fill="currentColor" opacity=".35"/></svg>
+        </div>
+        <span class="card-num">01</span>
+        <h3>Sentiment analysis</h3>
+        <p>We classify reviews (positive, neutral, negative) with calibrated models.</p>
+      </article>
+
+      <article class="card" style="--accent:#00B5C7">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="17" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 24 L34 34" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="17" cy="17" r="3" fill="currentColor"/></svg>
+        </div>
+        <span class="card-num">02</span>
+        <h3>Recurring topics</h3>
+        <p>We automatically detect which themes come up the most.</p>
+      </article>
+
+      <article class="card" style="--accent:#F5C518">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><path d="M4 30 L12 22 L20 26 L28 14 L36 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="22" r="2.4" fill="currentColor"/><circle cx="28" cy="14" r="2.4" fill="currentColor"/></svg>
+        </div>
+        <span class="card-num">03</span>
+        <h3>Time patterns</h3>
+        <p>We visualize peaks and dips in satisfaction over time.</p>
+      </article>
+
+      <article class="card" style="--accent:#4FAE52">
+        <div class="card-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40"><path d="M14 6 C8 6 8 14 14 14 L20 14 L20 6 Z" fill="currentColor" opacity=".8"/><path d="M14 16 L20 20 L20 32 L14 32 Z" fill="currentColor" opacity=".5"/><path d="M22 8 L34 8 M22 14 L32 14 M22 20 L34 20 M22 26 L30 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <span class="card-num">04</span>
+        <h3>Recommendations</h3>
+        <p>Concrete actions, prioritized by impact.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="solicitar">
+    <div class="form-wrap">
+      <header class="form-header">
+        <h2 class="display sm geo">Request your diagnosis.<br/><em>Free</em>, in 24–48 h.</h2>
+      </header>
+
+      <form id="lead-form" class="form" novalidate>
+        <div class="field">
+          <label for="nombre">Full name <span>*</span></label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="name" placeholder="Jane Smith" />
+        </div>
+
+        <div class="field">
+          <label for="negocio">Business name <span>*</span></label>
+          <input id="negocio" name="negocio" type="text" required placeholder="Downtown Café" />
+        </div>
+
+        <div class="field">
+          <label for="link">Link to your business <span>*</span></label>
+          <input id="link" name="link" type="text" inputmode="url" required placeholder="https://..." />
+          <small class="hint">Google Maps, Instagram, website, TripAdvisor, share.google… any public link works.</small>
+        </div>
+
+        <div class="field">
+          <label for="email">Contact email <span>*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@yourbusiness.com" />
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span class="btn-label">Request diagnosis</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p class="form-foot">We process every request manually. We always reply, even if we can't take the case.</p>
+      </form>
+
+      <div class="form-success" hidden>
+        <svg viewBox="0 0 64 64" width="56" height="56"><circle cx="32" cy="32" r="28" fill="none" stroke="#4FAE52" stroke-width="2.5"/><path d="M20 33 L29 42 L46 23" fill="none" stroke="#4FAE52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Got it! We received your request.</h3>
+        <p>We'll send the report to <strong class="echo-email">—</strong> within 24–48 business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-row">
+      <span class="brand-foot">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <circle cx="8" cy="8" r="3.2" fill="#E84A8E"/>
+          <circle cx="24" cy="10" r="2.4" fill="#00B5C7"/>
+          <circle cx="20" cy="24" r="3.6" fill="#1F2D5C"/>
+          <circle cx="6" cy="22" r="2" fill="#F5C518"/>
+          <path d="M8 8 L24 10 L20 24 L6 22 Z" stroke="#1A1A1A" stroke-width=".6" fill="none" opacity=".4"/>
+        </svg>
+        <span class="brand-foot-name">ROBUSTA</span>
+      </span>
+      <span class="muted">Data intelligence</span>
+    </div>
+    <div class="foot-row sub">
+      <span class="muted small">© 2026 ROBUSTA</span>
+    </div>
+  </footer>
+</main>
+
+<script src="../graph.js"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
